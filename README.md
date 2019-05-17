@@ -1,1 +1,1 @@
-# pb-interactive-js
+# programming-basics-with-javascript
