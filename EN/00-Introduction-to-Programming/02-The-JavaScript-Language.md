@@ -1,4 +1,5 @@
 [slide]
+# The JavaScript Language
 # Programming Languages, Compilers, Interpreters
 The **programming language** defines a set of rules (syntax)
 
