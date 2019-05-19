@@ -1,4 +1,5 @@
 [slide]
+# VS Code
 # What is Node.js?
 Node.js == server-side JavaScript runtime + toolset for developers
 
