@@ -1,0 +1,3 @@
+[slide]
+# Dummy
+[/slide]
