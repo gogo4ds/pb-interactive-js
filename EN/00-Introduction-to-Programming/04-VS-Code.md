@@ -4,7 +4,7 @@
 Node.js == server-side JavaScript runtime + toolset for developers
 
 Executes JavaScript (JS) code outside of the Web browser
-[image src="https://github.com/AlenPaunov/pb-interactive-course/blob/00-js-intro-to-programming/assets/intro-to-programming-3.png"/]
+[image src="https://github.com/AlenPaunov/pb-interactive-js/blob/master/assets/intro-to-programming-3.png"/]
 
 # Installing VS Code
 Download from: https://nodejs.org/en/download/

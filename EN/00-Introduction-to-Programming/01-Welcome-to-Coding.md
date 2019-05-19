@@ -20,7 +20,7 @@ The easiest way to run JavaScript commands (JS commands)
 
 The **browser console**: press \[F12\] in your Web browser
 
-[image src="https://github.com/AlenPaunov/pb-interactive-course/blob/00-js-intro-to-programming/assets/intro-to-programming-1.png"/]
+[image src="https://github.com/AlenPaunov/pb-interactive-js/blob/master/assets/intro-to-programming-1.png"/]
 [/slide]
 
 [slide]
@@ -67,7 +67,7 @@ console.log("Size = " + size);
 console.log("Area = " + size * size);
 ```
 
-[image src="https://github.com/AlenPaunov/pb-interactive-course/blob/00-js-intro-to-programming/assets/intro-to-programming-2.png"/]
+[image src="https://github.com/AlenPaunov/pb-interactive-js/blob/master/assets/intro-to-programming-2.png"/]
 [/slide]
 
 [slide]
