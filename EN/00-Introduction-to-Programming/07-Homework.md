@@ -14,8 +14,6 @@ We have prepared some simple problems for you to solve. If you struggle you can 
 function hello() {
    // Write your code here
 }
-
-hello();
 ```
 [/code-editor]
 [task-description]
@@ -35,8 +33,6 @@ Prints "Hello JavaScript" on the console
 function hello() {
    console.log("Hello JavaScript");
 }
-
-hello();
 ```
 [/code-editor]
 [task-description]
@@ -56,8 +52,6 @@ Prints "Hello JavaScript" on the console
 function calculate() {
    // Write your code here
 }
-
-calculate();
 ```
 [/code-editor]
 [task-description]
@@ -79,8 +73,6 @@ Write a JavaScript program, which:
 function calculate() {
    console.log(5 * 5);
 }
-
-calculate();
 ```
 [/code-editor]
 [task-description]
@@ -101,8 +93,6 @@ Write a JavaScript program, which:
 function nameAndExpression() {
     // Write your code here
 }
-
-nameAndExpression();
 ```
 [/code-editor]
 [task-description]
@@ -128,8 +118,6 @@ function nameAndExpression() {
     console.log("Catlyn");
     console.log(5 + 3);
 }
-
-nameAndExpression();
 ```
 [/code-editor]
 [task-description]
@@ -154,8 +142,6 @@ Write a program to print your name at the first line and calculate and print the
 function calculations() {
     // Write your code here
 }
-
-calculations();
 ```
 [/code-editor]
 [task-description]
@@ -179,8 +165,6 @@ function calculations() {
     console.log(4 * (2 + 3));
     console.log((2 + 5) * (8 - 2) / 7);
 }
-
-calculations();
 ```
 [/code-editor]
 [task-description]
@@ -199,19 +183,28 @@ Write a program, which calculates and prints the value of the following express
 [code-task title="Square of 7 * 7 Stars" executionStrategy="javascript-code"]
 [code-editor language=javascript]
 ```
-// Write your code here
+function squareOfStars() {
+    // Write your code here
+}
 ```
 [/code-editor]
 [task-description]
 Write a program, which:
 
 Prints a square of 7 * 7 stars like this:
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
 [/task-description]
 [code-io /]
@@ -223,25 +216,40 @@ Prints a square of 7 * 7 stars like this:
 [code-task title="Square of 7 * 7 Stars" executionStrategy="javascript-code"]
 [code-editor language=javascript]
 ```
-console.log("* * * * * * *");
-console.log("* * * * * * *");
-console.log("* * * * * * *");
-console.log("* * * * * * *");
-console.log("* * * * * * *");
-console.log("* * * * * * *");
-console.log("* * * * * * *");
+function squareOfSars() {
+    console.log("* * * * * * *");
+    console.log();
+    console.log("* * * * * * *");
+    console.log();
+    console.log("* * * * * * *");
+    console.log();
+    console.log("* * * * * * *");
+    console.log();
+    console.log("* * * * * * *");
+    console.log();
+    console.log("* * * * * * *");
+    console.log();
+    console.log("* * * * * * *");
+}
 ```
 [/code-editor]
 [task-description]
 Write a program, which:
 
 Prints a square of 7 * 7 stars like this:
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
+
 \* \* \* \* \* \* \*
 [/task-description]
 [code-io /]
