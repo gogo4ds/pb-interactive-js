@@ -1,5 +1,5 @@
 [slide]
-# Integrated Development Environments (IDE)
+# Integrated Development Environment (IDE)
 To write programs, we need an **IDE** (development environment)
 
 For **JavaScript**:
@@ -24,7 +24,7 @@ For programming in JavaScript, we may use the Visual Studio Code IDE
 [/slide]
 
 [slide]
-# Development Environments: Desktop and Online
+# Development Environment: Desktop and Online
 
 Install Visual Studio Code: https://code.visualstudio.com
 
