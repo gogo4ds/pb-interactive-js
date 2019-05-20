@@ -54,12 +54,12 @@ Programmers use IDE (like Visual Studio Code) to:
 
 * **Write** the code
 * **Run** and test the code
-* Find a fix **bugs** (debug the code)
+* Find and fix **bugs** (debug the code)
 [/slide]
 
 [slide]
 # Computer Program – Example
-Sample C# program (sequence of JavaScript commands):
+Sample JavaScript program (sequence of JavaScript commands):
 
 ```js
 let size = 5;
@@ -72,7 +72,7 @@ console.log("Area = " + size * size);
 
 [slide]
 # Complete Computer Program
-Sample complete JavaScript program (class + method + commands):
+Sample complete JavaScript program (function + commands):
 ```js
 function calculateArea() {
   let size = 5;

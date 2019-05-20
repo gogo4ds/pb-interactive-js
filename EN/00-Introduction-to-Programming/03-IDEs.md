@@ -9,7 +9,9 @@ For **JavaScript**:
 * **Atom / Vim / NetBeans / Eclipse / Visual Studio**
 
 For **Java** -> IntelliJ IDEA / Eclipse / NetBeans
+
 For **Python** -> PyCharm / Eclipse / VS Code
+
 For **C#** -> Visual Studio / Raider / VS Code
 
 Integrated Development Environments (IDE) simplify the software development
