@@ -1,5 +1,5 @@
 [slide]
-# Technical Session
+# Training Session
 
 [youtube-video videoId="IwyICsJMBHA" /]
 
