@@ -22,6 +22,6 @@ console.log(a > 0);        // true
 console.log(a > 100);      // false
 console.log(a == '5');     // true
 console.log(b == 2 * a);   // true 
-console.log("2" === 2);    // false
+console.log('2' === 2);    // false
 ```
 [/slide]
