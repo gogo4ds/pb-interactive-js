@@ -201,7 +201,7 @@ Write a function, which:
 [code-editor language=javascript]
 ```js
 function areaOfFigures(input) {
-  let figure = Number(input.shift());
+  let figure = input.shift();
   let side = Number(input.shift());
   let area = 0;
   if (figure === 'square') {
