@@ -1,13 +1,15 @@
 [slide]
-# Simple Conditions
-Check certain condition and take action according to the result
+# If Statement
+One of the single most important statements in every programming language is the if statement
+
+The if statement needs a boolean result, that is, true or false
+  * If the boolean result is true take action 
+
 ```js
 if (condition) {
-  // Code for execution if  
- // the condition is true
+  // Code for execution if the condition is true
 } 
 ```
-The condition holds true or false
 [/slide]
 
 [slide]
@@ -15,7 +17,7 @@ The condition holds true or false
 [code-task title="Freezing weather" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function freezingWeather([temperature]) {
+function freezingWeather(input) {
     // Write your code here
 }
 ```
@@ -40,10 +42,11 @@ Write a function, which:
 [code-task title="Freezing weather" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function freezingWeather([temperature]) {
-    if (Number(temperature) <= 0) {
-      console.log("Freezing weather!");
-   }
+function freezingWeather(input) {
+  let temperature = Number(input.shift());
+  if (temperature <= 0) {
+    console.log("Freezing weather!");
+  }
 }
 ```
 [/code-editor]
