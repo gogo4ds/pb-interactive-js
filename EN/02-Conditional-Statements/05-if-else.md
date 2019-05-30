@@ -31,10 +31,7 @@ else
   console.log("banana");
 console.log("lemon"); // Always executed
 ```
-[/slide]
 
-[slide]
-# Blocks of Code
 ```js
 let color = "red";
 if (color === "red") {
