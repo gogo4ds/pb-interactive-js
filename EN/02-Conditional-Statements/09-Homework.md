@@ -147,7 +147,7 @@ Write a function, which:
 ```js
 function speedInfo(input) {
   let speed = Number(input.shift());
-  if (Number(speed) <= 30) {
+  if (speed <= 30) {
     console.log("Slow");
   } else {
     console.log("Fast");
