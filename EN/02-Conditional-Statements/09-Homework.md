@@ -334,11 +334,11 @@ function coffeeShop(input) {
   let extra = input.shift();
   let price = 0;
   if (order === 'coffee')
-    price = 1.00
+    price = 1.00;
   else if (order === 'tea')
-    price = 0.60
+    price = 0.60;
   if (extra === 'sugar')
-    price += 0.40
+    price += 0.40;
   console.log(`Final price: ${price}`);
 }
 ```
