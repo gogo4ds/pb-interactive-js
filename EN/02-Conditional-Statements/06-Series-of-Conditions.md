@@ -1,19 +1,20 @@
 [slide]
-# Series of Conditions
-The **if-else** statement can be in a series
+# Sequence of If-Else Conditions
+Sometimes we need to do a sequence of conditions before we decide what actions our program will execute. In such cases, we can apply the construction if-else if ... -else in series. For this purpose, we use the following format:
+
 ```js
-if (…) 
+if (…) {
   // code
-else if (…) 
+} else if (…) { 
   // code
-else if (…) 
+} else if (…) { 
   // code
+}
 ```
-If one condition is true, the program will **NOT check** the rest of the conditions
 [/slide]
 
 [slide]
-# Series of Conditions – Example
+# Sequence of If-Else Conditions – Example
 The program checks the first condition, finds that it is **true** and ends
 ```js
 let a = 7;
@@ -32,7 +33,7 @@ else
 [code-task title="Number 1...9" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function printNumberValue([num]) {
+function printNumberValue(input) {
     // Write your code here
 }
 ```
@@ -57,28 +58,29 @@ Write a function, which:
 [code-task title="Number 1...9" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function printNumberValue([num]) {
-    if (Number(num) == 1) {
-       console.log("one");
-    } else if (Number(num) === 2) {
-       console.log("two");
-    } else if (Number(num) === 3) {
-       console.log("three");
-    } else if (Number(num) === 4) {
-       console.log("four");
-    } else if (Number(num) === 5) {
-       console.log("five");
-    } else if (Number(num) === 6) {
-       console.log("six");
-    } else if (Number(num) === 7) {
-       console.log("seven");
-    } else if (Number(num) === 8) {
-       console.log("eight");
-    } else if (Number(num) === 9) {
-       console.log("nine");
-    } else {
-       console.log("Number too big");
-    }
+function printNumberValue(input) {
+  let num = Number(input.shift());
+  if (num == 1) {
+      console.log("one");
+  } else if (num === 2) {
+      console.log("two");
+  } else if (num === 3) {
+      console.log("three");
+  } else if (num === 4) {
+      console.log("four");
+  } else if (num === 5) {
+      console.log("five");
+  } else if (num === 6) {
+      console.log("six");
+  } else if (num === 7) {
+      console.log("seven");
+  } else if (num === 8) {
+      console.log("eight");
+  } else if (num === 9) {
+      console.log("nine");
+  } else {
+      console.log("Number too big");
+  }
 }
 ```
 [/code-editor]
