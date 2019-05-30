@@ -1,4 +1,6 @@
 [slide]
+# Revision
+
 # Variables
 In programming **data** is stored in **variables**
 * **Variables** store data in a piece of the memory
@@ -15,9 +17,7 @@ age = age + 1;
 ```js
 console.log(age);
 ```
-[/slide]
 
-[slide]
 # Data Types in JavaScript
 Six data types that are primitives:
 * **Boolean**         
@@ -26,9 +26,7 @@ Six data types that are primitives:
 * **Number**        
 * **String**            
 * **Symbol** (new in ECMAScript 6)
-[/slide]
 
-[slide]
 # Expressions
 **Expressions** == **variables** and **values**, combined with **operators**
 ```js
@@ -38,9 +36,7 @@ a = b * 2;
 // b is a variable expression
 // b * 2 is an arithmetic expression
 ```
-[/slide]
 
-[slide]
 # Statements
 Commands / actions to be executed
 ```js
