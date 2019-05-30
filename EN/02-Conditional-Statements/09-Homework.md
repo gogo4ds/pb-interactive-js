@@ -205,9 +205,9 @@ function areaOfFigures(input) {
   let side = Number(input.shift());
   let area = 0;
   if (figure === 'square') {
-    area = Number(side) * Number(side)
+    area = side * side;
   } else {
-    area = Math.PI * Number(side) * Number(side)
+    area = Math.PI * side * side;
   }
   console.log(`${area.toFixed(2)}`);
 }
