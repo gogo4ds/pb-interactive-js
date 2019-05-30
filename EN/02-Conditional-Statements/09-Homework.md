@@ -10,7 +10,7 @@ We have prepared some simple problems for you to solve. If you struggle you can 
 [code-task title="Guess the Password" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function guessThePassword([password]) {
+function guessThePassword(input) {
     // Write your code here
 }
 ```
@@ -35,12 +35,13 @@ Write a function, which:
 [code-task title="Guess the Password" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function guessThePassword([password]) {
-   if (password == "s3cr3t!") {
-     console.log("Welcome");
-   } else {
-     console.log("Wrong password!");
-   }
+function guessThePassword(input) {
+  let password = input.shift();
+  if (password == "s3cr3t!") {
+    console.log("Welcome");
+  } else {
+    console.log("Wrong password!");
+  }
 }
 ```
 [/code-editor]
@@ -64,7 +65,7 @@ Write a function, which:
 [code-task title="Boiling Water" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function boilingWater([degrees]) {
+function boilingWater(input) {
     // Write your code here
 }
 ```
@@ -89,12 +90,13 @@ Write a function, which:
 [code-task title="Boiling Water" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function boilingWater([degrees]) {
-   if (Number(degrees) > 100) {
-      console.log("The water is boiling"); 
-   } else {
-      console.log("The water is not hot enough");
-   }
+function boilingWater(input) {
+  let degrees = Number(input.shift());
+  if (degrees > 100) {
+    console.log("The water is boiling"); 
+  } else {
+    console.log("The water is not hot enough");
+  }
 }
 ```
 [/code-editor]
@@ -118,7 +120,7 @@ Write a function, which:
 [code-task title="Speed Info" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function speedInfo([speed]) {
+function speedInfo(input) {
     // Write your code here
 }
 ```
@@ -143,12 +145,13 @@ Write a function, which:
 [code-task title="Speed Info" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function speedInfo([speed]) {
-   if (Number(speed) <= 30) {
-      console.log("Slow");
-   } else {
-      console.log("Fast");
-   }
+function speedInfo(input) {
+  let speed = Number(input.shift());
+  if (Number(speed) <= 30) {
+    console.log("Slow");
+  } else {
+    console.log("Fast");
+  }
 }
 ```
 [/code-editor]
@@ -172,7 +175,7 @@ Write a function, which:
 [code-task title="Area of Figures" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function areaOfFigures([figure, side]) {
+function areaOfFigures(input) {
     // Write your code here
 }
 ```
@@ -197,14 +200,16 @@ Write a function, which:
 [code-task title="Area of Figures" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function areaOfFigures([figure, side]) {
-   let area = 0;
-   if (figure === 'square') {
-      area = Number(side) * Number(side)
-   } else {
-      area = Math.PI * Number(side) * Number(side)
-   }
-   console.log(`${area.toFixed(2)}`);
+function areaOfFigures(input) {
+  let figure = Number(input.shift());
+  let side = Number(input.shift());
+  let area = 0;
+  if (figure === 'square') {
+    area = Number(side) * Number(side)
+  } else {
+    area = Math.PI * Number(side) * Number(side)
+  }
+  console.log(`${area.toFixed(2)}`);
 }
 ```
 [/code-editor]
@@ -228,7 +233,7 @@ Write a function, which:
 [code-task title="Tickets" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function tickets([ticketType]) {
+function tickets(input) {
     // Write your code here
 }
 ```
@@ -256,14 +261,15 @@ Write a function, which:
 [code-task title="Tickets" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function tickets([ticketType]) {
-   if (ticketType === 'student') {
-      console.log('$1.00');
-   } else if (ticketType === 'regular') {
-      console.log('$1.60');
-   } else {
-      console.log('Invalid ticket type!');
-   }
+function tickets(input) {
+  let ticketType = input.shift();
+  if (ticketType === 'student') {
+    console.log('$1.00');
+  } else if (ticketType === 'regular') {
+    console.log('$1.60');
+  } else {
+    console.log('Invalid ticket type!');
+  }
 }
 ```
 [/code-editor]
@@ -289,7 +295,7 @@ Write a function, which:
 [code-task title="Coffee Shop" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function coffeeShop([order, extra]) {
+function coffeeShop(input) {
     // Write your code here
 }
 ```
@@ -323,15 +329,17 @@ Prices
 [code-task title="Coffee Shop" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function coffeeShop([order, extra]) {
-   let price = 0;
-   if (order === 'coffee')
-      price = 1.00
-   else if (order === 'tea')
-     price = 0.60
-   if (extra === 'sugar')
-     price += 0.40
-   console.log(`Final price: ${price}`);
+function coffeeShop(input) {
+  let order = input.shift(); 
+  let extra = input.shift();
+  let price = 0;
+  if (order === 'coffee')
+    price = 1.00
+  else if (order === 'tea')
+    price = 0.60
+  if (extra === 'sugar')
+    price += 0.40
+  console.log(`Final price: ${price}`);
 }
 ```
 [/code-editor]
@@ -364,7 +372,7 @@ Prices
 [code-task title="Valid Triangle" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function validTriangle([a, b, c]) {
+function validTriangle(input) {
     // Write your code here
 }
 ```
@@ -391,18 +399,24 @@ Write a function, which:
 [code-task title="Valid Triangle" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```js
-function validTriangle([a, b, c]) {
-   let isValidTriangle = true;
-   if (Number(a) + Number(b) <= Number(c))
-      isValidTriangle = false;
-   else if (Number(a) + Number(c) <= Number(b))
-      isValidTriangle = false;
-   else if (Number(b) + Number(c) <= Number(a))
-      isValidTriangle = false;
-   if (isValidTriangle)
-      console.log("Valid Triangle")
-   else
-      console.log("Invalid Trianlge")
+function validTriangle(input) {
+  let a = Number(input.shift());
+  let b = Number(input.shift());
+  let c = Number(input.shift());
+  let isValidTriangle = true;
+  if (a + b <= c) {
+    isValidTriangle = false;
+  } else if (a + c <= b) {
+    isValidTriangle = false;
+  } else if (b + c <= a) {
+    isValidTriangle = false;
+  }
+
+  if (isValidTriangle) {
+    console.log("Valid Triangle");
+  } else {
+    console.log("Invalid Trianlge");
+  }
 }
 ```
 [/code-editor]
