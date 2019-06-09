@@ -1,18 +1,37 @@
 [slide]
 # Switch
-Used for choosing among a list of possibilities
+The switch statement evaluates an expression, matching the expression's value to a case clause
 
 Alternative to an **if-else** statement
-```js
+
+```
 switch (selector) {
-  case value1:
-    statements;
-    break;
-  default:
-    statements;
-    break;
+    case value1:
+      statements;
+      break;
+    case value2:
+      statements;
+      break;
 }
 ```
+
+# Default Clause
+The default clause is executed if the value of expression doesn't match any of the case clauses
+
+```
+switch (selector) {
+    case value1:
+      statements;
+      break;
+    case value2:
+      statements;
+      break;
+    default:
+      statements;
+      break;
+}
+```
+
 # Example
 ```js
 function printResponse(choice) {
@@ -33,8 +52,9 @@ function printResponse(choice) {
 
 [slide]
 # Multiple Labels
-Used when the same logic has to be executed in more than one case
-```js
+Used when the same logic has to be executed for different cases
+
+```
 switch (selector) {
   case value1:
   case value2:
@@ -45,9 +65,10 @@ switch (selector) {
     break;
 }
 ```
+
 # Example
 ```js
-function printAnimalType(animal) {
+function animalType(animal) {
    switch (animal) {
       case "dog":
       case "cat":
