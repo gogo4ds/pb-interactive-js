@@ -197,8 +197,7 @@ function vowelOrConsonant(input) {
     letter === 'O' || letter === 'o' ||
     letter === 'U' || letter === 'u') {
     console.log("Vowel");
-  }
-  else {
+  } else {
     console.log("Consonant");
   }
 }
@@ -264,8 +263,7 @@ function productOfThreeNumbers(input) {
 
   if (n1 === 0 || n2 === 0 || n3 === 0) {
     console.log("zero");
-  }
-  else {
+  } else {
     let negativeNumbersCount = 0;
     
     if (n1 < 0) {
@@ -350,7 +348,7 @@ Write a program, which checks for sorted 3 numbers:
 ```
 function sortedNumbers(input) {
     let n1 = Number(input.shift());
-    let n2 = doNumber(input.shift());
+    let n2 = Number(input.shift());
     let n3 = Number(input.shift());
 
     if (n1 < n2 && n2 < n3) {
