@@ -408,6 +408,12 @@ Write a function, which:
 [/task-description]
 [code-io /]
 [/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|Winter|180.00|
+|Hotel||
+|5||
 [/slide]
 
 [slide]
@@ -424,32 +430,25 @@ function vacationExpenses(input) {
     if (season === "Spring") {
       if (accommodation === "Hotel") {
         totalPrice = days * 30 * 0.80;
-      }
-      else if (accommodation === "Camping") {
+      } else if (accommodation === "Camping") {
         totalPrice = days * 10 * 0.80;
       }
-    }
-    else if (season === "Summer") {
+    } else if (season === "Summer") {
       if (accommodation === "Hotel") {
         totalPrice = days * 50;
-      }
-      else if (accommodation === "Camping") {
+      } else if (accommodation === "Camping") {
         totalPrice = days * 30;
       }
-    }
-    else if (season === "Autumn") {
+    } else if (season === "Autumn") {
       if (accommodation === "Hotel") {
         totalPrice = days * 20 * 0.7;
-      }
-      else if (accommodation === "Camping") {
+      } else if (accommodation === "Camping") {
         totalPrice = days * 15 * 0.7;
       }
-    }
-    else if (season === "Winter") {
+    } else if (season === "Winter") {
       if (accommodation === "Hotel") {
         totalPrice = days * 40 * 0.9;
-      }
-      else if (accommodation === "Camping") {
+      } else if (accommodation === "Camping") {
         totalPrice = days * 10 * 0.9;
       }
     }
@@ -473,6 +472,12 @@ Write a function, which:
 [/task-description]
 [code-io /]
 [/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|Winter|180.00|
+|Hotel||
+|5||
 [/slide]
 
 [slide]
