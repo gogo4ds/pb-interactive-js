@@ -29,8 +29,8 @@ If you observe above table, **the NOT operator will always return the reverse va
 
 [slide]
 # Problem: Bonus Points
-[code-task title="Bonus Points" executionStrategy="csharp-dot-net-core-code" requiresInput]
-[code-editor language=csharp]
+[code-task title="Bonus Points" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
 ```
 function bonusPoints(input) {
     // Write your code here
