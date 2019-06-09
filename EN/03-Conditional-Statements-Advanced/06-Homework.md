@@ -638,10 +638,19 @@ Write a function, which:
 [/task-description]
 [code-io /]
 [/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|420|The withdraw was successful.|
+|20||
+|25||
+|10|The daily limit was exceeded.|
+|50|Insufficient availability.|
+|20||
 [/slide]
 
 [slide]
-# Problem: ATM
+# Solution: ATM
 [code-task title="ATM" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
@@ -670,6 +679,15 @@ Write a function, which:
 [/task-description]
 [code-io /]
 [/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|420|The withdraw was successful.|
+|20||
+|25||
+|10|The daily limit was exceeded.|
+|50|Insufficient availability.|
+|20||
 [/slide]
 
 [slide]
