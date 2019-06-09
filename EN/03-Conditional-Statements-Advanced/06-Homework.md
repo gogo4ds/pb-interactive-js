@@ -1,9 +1,16 @@
 [slide]
+# Homework
+Now, it's your turn to practice what you have learned in the training session.
+
+We have prepared some simple problems for you to solve. If you struggle you can see the solution after each problem. 
+[/slide]
+
+[slide]
 # Problem: Fruit or Vegetable
 [code-task title="Fruit or Vegetable" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function fruitOrVegetable(food) {
+function fruitOrVegetable(input) {
     // Write your code here
 }
 ```
@@ -31,15 +38,26 @@ Write a function, which:
 [code-task title="Fruit or Vegetable" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function fruitOrVegetable(product) {
-  switch (product) {
-    case "cucumber":
-    case "pepper":
-    case "carrot":
-      console.log("vegetable");
-      break;
-    // TODO: Implement the other cases
-  }
+function fruitOrVegetable(input) {
+    let product = input.shift();
+    switch (product) {
+      case "cucumber":
+      case "pepper":
+      case "carrot":
+        console.log("vegetable");
+        break;
+      case "banana":
+      case "apple":
+      case "kiwi":
+      case "cherry":
+      case "lemon":
+      case "grapes":
+        console.log("fruit");
+        break;
+      default:
+        console.log("unknown");
+        break;
+    }
 }
 ```
 [/code-editor]
@@ -66,7 +84,7 @@ Write a function, which:
 [code-task title="Day of Week" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function dayOfWeek(day) {
+function dayOfWeek(input) {
     // Write your code here
 }
 ```
@@ -93,12 +111,33 @@ Write a function, which:
 [code-editor language=javascript]
 ```
 function dayOfWeek(day) {
-    switch (day) {
-    case 1: console.log("Monday"); break;
-    case 2: console.log("Tuesday"); break;
-    // TODO: Implement the other valid days
-    default: console.log("Error"); break; 
-   }
+  let day = Number(input.shift());
+  switch (day) {
+    case 1:
+      console.log("Monday");
+      break;
+    case 2:
+      console.log("Tuesday");
+      break;
+    case 3:
+      console.log("Wednesday");
+      break;
+    case 4:
+      console.log("Thursday");
+      break;
+    case 5:
+      console.log("Friday");
+      break;
+    case 6:
+      console.log("Saturday");
+      break;
+    case 7:
+      console.log("Sunday");
+      break;
+    default:
+      console.log("Error");
+      break;
+  }
 }
 ```
 [/code-editor]
@@ -119,11 +158,239 @@ Write a function, which:
 [/slide]
 
 [slide]
+# Problem: Vowel or Consonant
+[code-task title="Vowel or Consonant" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function vowelOrConsonant(input) {
+    // Write your code here
+}
+```
+[/code-editor]
+[task-description]
+Write a program to check a letter for vowel or consonant:
+
+* Read a letter from the English alphabet
+* Print either "Vowel" or "Consonant"
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|a|Vowel|
+|E|Vowel|
+|b|Consonant|
+[/slide]
+
+[slide]
+# Solution: Vowel or Consonant
+[code-task title="Vowel or Consonant" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function vowelOrConsonant(input) {
+  let letter = input.shift();
+
+  if (letter === 'A' || letter === 'a' ||
+    letter === 'E' || letter === 'e' ||
+    letter === 'I' || letter === 'i' ||
+    letter === 'O' || letter === 'o' ||
+    letter === 'U' || letter === 'u') {
+    console.log("Vowel");
+  }
+  else {
+    console.log("Consonant");
+  }
+}
+```
+[/code-editor]
+[task-description]
+Write a program to check a letter for vowel or consonant:
+
+* Read a letter from the English alphabet
+* Print either "Vowel" or "Consonant"
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|a|Vowel|
+|E|Vowel|
+|b|Consonant|
+[/slide]
+
+[slide]
+# Problem: Product of 3 Numbers
+[code-task title="Product of 3 Numbers" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function productOfThreeNumbers(input) {
+    // Write your code here
+}
+```
+[/code-editor]
+[task-description]
+Calculate the sign of the product of 3 numbers:
+
+* Read 3 floating-point numbers
+* Print the sign of the product of the entered 3 numbers: positive, negative or zero
+
+Try to do this without multiplying the 3 numbers
+
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|2|negative|
+|3||
+|-1||
+|-3|positive|
+|-4||
+|5||
+[/slide]
+
+[slide]
+# Solution: Product of 3 Numbers
+[code-task title="Product of 3 Numbers" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function productOfThreeNumbers(input) {
+  let n1 = Number(input.shift());
+  let n2 = Number(input.shift());
+  let n3 = Number(input.shift());
+
+  if (n1 === 0 || n2 === 0 || n3 === 0) {
+    console.log("zero");
+  }
+  else {
+    let negativeNumbersCount = 0;
+    
+    if (n1 < 0) {
+      negativeNumbersCount++;
+    }
+
+    if (n2 < 0) {
+      negativeNumbersCount++;
+    }
+
+    if (n3 < 0) {
+      negativeNumbersCount++;
+    }
+
+    if (negativeNumbersCount % 2 === 0) {
+      console.log("positive");
+    } else {
+      console.log("negative");
+    }
+  }
+}
+```
+[/code-editor]
+[task-description]
+Calculate the sign of the product of 3 numbers:
+
+* Read 3 floating-point numbers
+* Print the sign of the product of the entered 3 numbers: positive, negative or zero
+
+Try to do this without multiplying the 3 numbers
+
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|2|negative|
+|3||
+|-1||
+|-3|positive|
+|-4||
+|5||
+[/slide]
+
+[slide]
+# Problem: Sorted Numbers
+[code-task title="Sorted Numbers" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function sortedNumbers(input) {
+    // Write your code here
+}
+```
+[/code-editor]
+[task-description]
+Write a program, which checks for sorted 3 numbers:
+
+* Read 3 real numbers
+* Print "Ascending" if the numbers are in ascending order
+* Print "Descending" if the numbers are in descending order
+* Print "Not sorted" in any other case
+
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|1|Ascending|
+|2||
+|3||
+|3|Not sorted|
+|1||
+|2||
+[/slide]
+
+[slide]
+# Solution: Sorted Numbers
+[code-task title="Sorted Numbers" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function sortedNumbers(input) {
+    let n1 = Number(input.shift());
+    let n2 = doNumber(input.shift());
+    let n3 = Number(input.shift());
+
+    if (n1 < n2 && n2 < n3) {
+      console.log("Ascending");
+    } else if (n1 > n2 && n2 > n3) {
+      console.log("Descending");
+    } else {
+      console.log("Not sorted");
+    }
+}
+```
+[/code-editor]
+[task-description]
+Write a program, which checks for sorted 3 numbers:
+
+* Read 3 real numbers
+* Print "Ascending" if the numbers are in ascending order
+* Print "Descending" if the numbers are in descending order
+* Print "Not sorted" in any other case
+
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|1|Ascending|
+|2||
+|3||
+|3|Not sorted|
+|1||
+|2||
+[/slide]
+
+[slide]
 # Problem: Vacation Expenses
 [code-task title="Vacation Expenses" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function vacationExpenses(season, accomodationType, days) {
+function vacationExpenses(input) {
     // Write your code here
 }
 ```
@@ -150,17 +417,46 @@ Write a function, which:
 [code-task title="Vacation Expenses" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function vacationExpenses(season, accomodationType, days) {
+function vacationExpenses(input) {
+    let season = input.shift();
+    let accommodation = input.shift();
+    let days = Number(input.shift());
     let totalPrice = 0;
-    if (season == "Spring") {
-       if (accommodation == "Hotel") {
-          totalPrice = days * 30 * 0.70;
-       } else if (accommodation == "Camping") {
-          totalPrice = days * 10 * 0.70;
-       }
-    }
-    // TODO: Implement the other cases
 
+    if (season === "Spring") {
+      if (accommodation === "Hotel") {
+        totalPrice = days * 30 * 0.80;
+      }
+      else if (accommodation === "Camping") {
+        totalPrice = days * 10 * 0.80;
+      }
+    }
+    else if (season === "Summer") {
+      if (accommodation === "Hotel") {
+        totalPrice = days * 50;
+      }
+      else if (accommodation === "Camping") {
+        totalPrice = days * 30;
+      }
+    }
+    else if (season === "Autumn") {
+      if (accommodation === "Hotel") {
+        totalPrice = days * 20 * 0.7;
+      }
+      else if (accommodation === "Camping") {
+        totalPrice = days * 15 * 0.7;
+      }
+    }
+    else if (season === "Winter") {
+      if (accommodation === "Hotel") {
+        totalPrice = days * 40 * 0.9;
+      }
+      else if (accommodation === "Camping") {
+        totalPrice = days * 10 * 0.9;
+      }
+    }
+
+    console.log(totalPrice.toFixed(2));
 }
 ```
 [/code-editor]
@@ -182,58 +478,11 @@ Write a function, which:
 [/slide]
 
 [slide]
-# Problem: Point in Rectangle
-[code-task title="Point in Rectangle" executionStrategy="javascript-code" requiresInput]
-[code-editor language=javascript]
-```
-function pointInRectangle(x, y) {
-    // Write your code here
-}
-```
-[/code-editor]
-[task-description]
-Write a program, which:
-
-* Reads the coordinates of a point - **x, y**
-* Reads the coordinates of a rectangle - **x1, y1, x2, y2**
-* If the point is inside prints ***"Inside"***
-* If it isn't prints ***"Outside"***
-[/task-description]
-[code-io /]
-[/code-task]
-[/slide]
-
-[slide]
-# Solution: Point in Rectangle
-[code-task title="Point in Rectangle" executionStrategy="javascript-code" requiresInput]
-[code-editor language=javascript]
-```
-function pointInRectangle(x, y) {
-    if (x >= x1 && x <= x2 && y >= y1 && y <= y2) {
-      console.log("Inside");
-    }
-    // TODO: outside condition
-}
-```
-[/code-editor]
-[task-description]
-Write a program, which:
-
-* Reads the coordinates of a point - **x, y**
-* Reads the coordinates of a rectangle - **x1, y1, x2, y2**
-* If the point is inside prints ***"Inside"***
-* If it isn't prints ***"Outside"***
-[/task-description]
-[code-io /]
-[/code-task]
-[/slide]
-
-[slide]
 # Problem: Cinema
 [code-task title="Cinema" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function cinema(type, rows, cols) {
+function cinema(input) {
     // Write your code here
 }
 ```
@@ -258,15 +507,23 @@ Write a function, which:
 [code-task title="Cinema" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function cinema(type, rows, cols) {
-    let totalSeats = rows * cols;
-    switch (type) {
-       case "Premiere":
-          console.log("{0:f2}", totalSeats * 12.0);
-          break;
-       // TODO: Implement the other cases
-    }
+function cienema(input) {
+    let type = input.shift();
+    let rows = Number(input.shift());
+    let cols = Number(input.shift());
+    let seats = rows * cols;
 
+    switch (type) {
+      case "Premiere":
+        console.log((seats * 12.0).toFixed(2));
+        break;
+      case "Normal":
+        console.log((seats * 7.50).toFixed(2));
+        break;
+      case "Discount":
+        console.log((seats * 5.00).toFixed(2));
+        break;
+    }
 }
 ```
 [/code-editor]
@@ -290,7 +547,7 @@ Write a function, which:
 [code-task title="Number Operations" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function numberOperations(num1, num2, operation) {
+function numberOperations(input) {
     // Write your code here
 }
 ```
@@ -318,13 +575,25 @@ Write a function, which:
 [code-task title="Number Operations" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function numberOperations(num1, num2, operation) {
-    let result = 0;
-    if (operation == "+") 
-      result = num1 + num2; 
-    // TODO: Implement the rest of operations
-    console.log(`${num1} ${operation} ${num2} = ${result}`);
+function numberOperations(input) {
+    let num1 = Number(input.shift());
+    let num2 = Number(input.shift());
+    let operation = input.shift()
 
+    let result = 0;
+    if (operation === "+") {
+      result = num1 + num2;
+    } else if (operation === "-") {
+      result = num1 - num2;
+    } else if (operation === "*") {
+      result = num1 * num2;
+    } else if (operation === "/") {
+      result = num1 / num2;
+    } else if (operation === "%") {
+      result = num1 % num2;
+    }
+
+    console.log(`${num1} ${operation} ${num2} = ${result}`);
 }
 ```
 [/code-editor]
@@ -351,7 +620,7 @@ Write a function, which:
 [code-task title="ATM" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function ATM(accountAmount, withdrawAmount, dailyLimit) {
+function ATM(input) {
     // Write your code here
 }
 ```
@@ -373,14 +642,18 @@ Write a function, which:
 [code-task title="ATM" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function ATM(accountAmount, withdrawAmount, dailyLimit) {
-    if (// Withdraw is possible) {
-        console.log("The withdraw was successful.");
-    } else if (// Daily limit exceeded) {
-        console.log("The daily limit was exceeded.");
-    } else if (// Not enough account balance) {
-        console.log("Insufficient availability.");
-    }
+function ATM(input) {
+  let balance = Number(input.shift());
+  let withdraw = Number(input.shift());
+  let limit = Number(input.shift());
+
+  if (balance >= withdraw && withdraw <= limit) {
+    Console.WriteLine("The withdraw was successful.");
+  } else if (withdraw > limit) {
+    Console.WriteLine("The daily limit was exceeded.");
+  } else if (withdraw > balance) {
+    Console.WriteLine("Insufficient availability.");
+  }
 }
 ```
 [/code-editor]
@@ -394,4 +667,84 @@ Write a function, which:
 [/task-description]
 [code-io /]
 [/code-task]
+[/slide]
+
+[slide]
+# Problem: Biggest of Five Numbers
+[code-task title="Biggest of Five Numbers" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function biggestOfFiveNumbers(input) {
+    // Write your code here
+}
+```
+[/code-editor]
+[task-description]
+Write a program to find the biggest among 5 numbers
+* Read 5 integers
+* Print the biggest number
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|1|5|
+|2||
+|3||
+|4||
+|5||
+|-1|-1|
+|-2||
+|-3||
+|-4||
+|-5||
+[/slide]
+
+[slide]
+# Solution: Biggest of Five Numbers
+[code-task title="Biggest of Five Numbers" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
+```
+function biggestOfFiveNumbers(input) {
+  let num1 = Number(input.shift());
+  let num2 = Number(input.shift());
+  let num3 = Number(input.shift());
+  let num4 = Number(input.shift());
+  let num5 = Number(input.shift());
+
+  if (num1 >= num2 && num1 >= num3 && num1 >= num4 && num1 >= num5) {
+    console.log(num1);
+  } else if (num2 >= num1 && num2 >= num3 && num2 >= num4 && num2 >= num5) {
+    console.log(num2);
+  } else if (num3 >= num1 && num3 >= num2 && num3 >= num4 && num3 >= num5) {
+    console.log(num3);
+  } else if (num4 >= num1 && num4 >= num2 && num5 >= num3 && num4 >= num5) {
+    console.log(num4);
+  } else if (num5 >= num1 && num5 >= num2 && num5 >= num3 && num5 >= num4) {
+    console.log(num5);
+  }
+}
+```
+[/code-editor]
+[task-description]
+Write a program to find the biggest among 5 numbers
+* Read 5 integers
+* Print the biggest number
+[/task-description]
+[code-io /]
+[/code-task]
+# Sample Input and Output
+|Input|Output|
+|-----|------|
+|1|5|
+|2||
+|3||
+|4||
+|5||
+|-1|-1|
+|-2||
+|-3||
+|-4||
+|-5||
 [/slide]
