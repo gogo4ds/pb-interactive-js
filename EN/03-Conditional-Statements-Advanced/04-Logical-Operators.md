@@ -32,13 +32,8 @@ If you observe above table, **the NOT operator will always return the reverse va
 [code-task title="Bonus Points" executionStrategy="csharp-dot-net-core-code" requiresInput]
 [code-editor language=csharp]
 ```
-using System;
-public class Program
-{
-  public static void Main()
-    {
-      // Write code here
-    }
+function bonusPoints(input) {
+    // Write your code here
 }
 ```
 [/code-editor]
@@ -58,32 +53,21 @@ Write a program that applies bonus to given points
 
 [slide]
 # Solution: Bonus Points
-[code-task title="Bonus Points" executionStrategy="csharp-dot-net-core-code" requiresInput]
-[code-editor language=csharp]
+[code-task title="Bonus Points" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
 ```
-using System;
+function bonusPoints(input) {
+    let points = Number(input.shift());
 
-public class Program
-{
-    public static void Main()
-    {
-        int points = int.Parse(Console.ReadLine());
-
-        if (points >= 0 && points <= 3)
-        {
-            points += 5;
-        }
-        else if (points >= 4 && points <= 6)
-        {
-            points += 15;
-        }
-        else if (points >= 7 && points <= 9)
-        {
-            points += 20;
-        }
-
-        Console.WriteLine(points);
+    if (points >= 0 && points <= 3) {
+      points += 5;
+    } else if (points >= 4 && points <= 6) {
+      points += 15;
+    } else if (points >= 7 && points <= 9) {
+      points += 20;
     }
+
+    console.log(points);
 }
 ```
 [/code-editor]
@@ -104,16 +88,11 @@ Write a program that applies bonus to given points
 
 [slide]
 # Problem: Food or Drink
-[code-task title="Food or Drink" executionStrategy="csharp-dot-net-core-code" requiresInput]
-[code-editor language=csharp]
+[code-task title="Food or Drink" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
 ```
-using System;
-public class Program
-{
-  public static void Main()
-    {
-      // Write code here
-    }
+function foodOrAnimal(input) {
+    // Write your code here
 }
 ```
 [/code-editor]
@@ -130,28 +109,17 @@ Write a program, which:
 
 [slide]
 # Solution: Food or Drink
-[code-task title="Food or Drink" executionStrategy="csharp-dot-net-core-code" requiresInput]
-[code-editor language=csharp]
+[code-task title="Food or Drink" executionStrategy="javascript-code" requiresInput]
+[code-editor language=javascript]
 ```
-using System;
-
-public class Program
-{
-    public static void Main()
-    {
-        string s = Console.ReadLine();
-        if (s == "curry" || s == "noodles" || s == "sushi" || s == "spaghetti")
-        {
-            Console.WriteLine("food");
-        }
-        else if (s == "tea" || s == "water" || s == "coffee")
-        {
-            Console.WriteLine("drink");
-        }
-        else
-        {
-            Console.WriteLine("unknown");
-        }
+function foodOrAnimal(input) {
+    let s = input.shift();
+    if (s == "curry" || s == "noodles" || s == "sushi" || s == "spaghetti") {
+      console.log("food");
+    } else if (s == "tea" || s == "water" || s == "coffee") {
+      console.log("drink");
+    } else {
+      console.log("unknown");
     }
 }
 ```
