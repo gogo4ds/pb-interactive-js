@@ -23,7 +23,7 @@ if (raining) {
 [code-task title="Marketplace" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function marketPlace(product, dayType) {
+function marketPlace(input) {
     // Write your code here
 }
 ```
@@ -54,15 +54,28 @@ Create a function, which:
 [code-task title="Marketplace" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function marketPlace(product, dayType) {
-    if (product == "Banana") {
-      if (dayOfWeek == "Weekday") {
-         console.log("2.50");
-      } else {
-         console.log("2.70");
-      }
-   }
-   // TODO: Implement case for kiwi and apple
+function marketPlace(input) {
+  let product = input.shift();
+  let dayOfWeek = input.shift();
+
+  if (product == "Banana") {
+    if (dayOfWeek == "Weekday") {
+      console.log("2.50");
+    } else
+      console.log("2.70");
+  } else if (product == "Apple") {
+    if (dayOfWeek == "Weekday") {
+      console.log("1.30");
+    } else {
+      console.log("1.60");
+    }
+  } else if (product == "Kiwi") {
+    if (dayOfWeek == "Weekday") {
+      console.log("2.20");
+    } else {
+      console.log("3.00");
+    }
+  }
 }
 ```
 [/code-editor]
@@ -92,7 +105,7 @@ Create a function, which:
 [code-task title="Biggest Number of Three" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function biggestNumberOfThree(num1, num2, num3) {
+function biggestNumberOfThree(input) {
     // Write your code here
 }
 ```
@@ -121,18 +134,22 @@ Write a function, which:
 [code-task title="Biggest Number of Three" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function biggestNumberOfThree(num1, num2, num3) {
-    if (first > second)
-      if (first > third)
-         console.log(first);
-      else
-         console.log(third);
-    else
-      if (second > third)
-         console.log(second);
-      else
-         console.log(third);
+function biggestNumberOfThree(input) {
+  let first = Number(input.shift());
+  let second = Number(input.shift());
+  let third = Number(input.shift());
 
+  if (first > second)
+    if (first > third) {
+      console.log(first);
+    } else {
+      console.log(third);
+    } else
+    if (second > third) {
+      console.log(second);
+    } else {
+      console.log(third);
+    }
 }
 ```
 [/code-editor]
