@@ -110,7 +110,7 @@ Write a function, which:
 [code-task title="Day of Week" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function dayOfWeek(day) {
+function dayOfWeek(input) {
   let day = Number(input.shift());
   switch (day) {
     case 1:
