@@ -660,11 +660,11 @@ function ATM(input) {
   let limit = Number(input.shift());
 
   if (balance >= withdraw && withdraw <= limit) {
-    Console.WriteLine("The withdraw was successful.");
+    console.log("The withdraw was successful.");
   } else if (withdraw > limit) {
-    Console.WriteLine("The daily limit was exceeded.");
+    console.log("The daily limit was exceeded.");
   } else if (withdraw > balance) {
-    Console.WriteLine("Insufficient availability.");
+    console.log("Insufficient availability.");
   }
 }
 ```
