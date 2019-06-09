@@ -1,16 +1,10 @@
 [slide]
-# Revision 
-
-# Definition and Types
-Very often when in your code, you want to perform different actions for different decisions
-
-In JavaScript we have the following conditional statements:
-
-* ***if*** - execute a block code, if a specified condition is true
-* ***else*** - execute a block of code, if the same condition is false
+# Revision
 
 # The if Statement
-Used to execute block of code if a given condition is met
+Very often you want to perform different actions for different conditions
+
+The if statement executes a statement if a specified condition is true
 
 ```js
 function greet (hour) {
@@ -18,12 +12,13 @@ function greet (hour) {
      console.log("Good day");
   }
 }
+
 greet(10);   // Good day
 greet(19);   // No output
 ```
 
 # The else Statement
-Used to execute block of code if a given condition is not met
+If the condition is false, another statement can be executed
 
 ```js
 function greet (hour) {
@@ -33,6 +28,7 @@ function greet (hour) {
      console.log("Good evening");
   }
 }
+
 greet(19); // Good evening
 ```
 
