@@ -91,7 +91,7 @@ Write a program that applies bonus to given points
 [code-task title="Food or Drink" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function foodOrAnimal(input) {
+function foodOrDrink(input) {
     // Write your code here
 }
 ```
@@ -112,7 +112,7 @@ Write a program, which:
 [code-task title="Food or Drink" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function foodOrAnimal(input) {
+function foodOrDrink(input) {
     let s = input.shift();
     if (s == "curry" || s == "noodles" || s == "sushi" || s == "spaghetti") {
       console.log("food");
