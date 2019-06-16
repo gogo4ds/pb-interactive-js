@@ -36,7 +36,7 @@ for (let i = 0; i < 10; i += 2) {
 }
 ```
 ```js
-for (let i = 10; i >= /*Always pay attention on the condition*/ 0; i -= 2) {
+for (let i = 10; i >= 0; i -= 2) {
   console.log(i);
 }
 ```
