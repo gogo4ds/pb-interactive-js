@@ -1,4 +1,6 @@
 [slide]
+# Revision
+
 # Nested Conditions
 An **if-else** statement can be **nested** within another **if-else** statement
 
@@ -12,21 +14,15 @@ if (expression) {
     // Code to be executed
 }
 ```
-[/slide]
 
-[slide]
 # Conditional Operators
 Logical operators are used to perform logical operation such as **AND**, **OR**, **NOT**
 
 The logical operators are:
-
 * AND (**&&**)
 * OR (**||**)
 * NOT (**!**)
-* Brackets
-[/slide]
 
-[slide]
 # Switch-Case 
 Used for choosing among a list of possibilities
 
