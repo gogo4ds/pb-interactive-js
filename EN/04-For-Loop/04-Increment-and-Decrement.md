@@ -47,7 +47,7 @@ for (let i = 10; i >= 0; i -= 2) {
 [code-task title="Number Ending with 7" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function numbersEndingWith7 (n) {
+function numbersEndingWith7 (input) {
    // Write your code here
 }
 ```
@@ -77,7 +77,9 @@ Write a function, which:
 [code-task title="Number Ending with 7" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function numbersEndingWith7 (n) {
+function numbersEndingWith7 (input) {
+   let n = Number(input.shift());
+
    for (let i = 7; i <= n; i += 10) {
       console.log(i);
    }
@@ -137,10 +139,13 @@ Write a function, which:
 [code-task title="Exam Countdown" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function examCountdown (days) {
+function examCountdown (input) {
+   let days = Number(input.shift());
+
    for (let i = days; i >= 1; i -= 1) {
       console.log(`${i} days before the exam`);
    }
+   
    console.log("The exam has come");
 }
 ```
