@@ -1,11 +1,4 @@
 [slide]
-# Real Life Example
-Each day of our lives is an **iteration** in a for loop
-
-[image src="https://github.com/AlenPaunov/pb-interactive-course/blob/04-js-for-loops/assets/for-loops-1.png"/]
-[/slide]
-
-[slide]
 # For Loop
 Allows code to be executed **repeatedly**
 
@@ -34,7 +27,7 @@ for (let i = 1; i <= 10; i += 1) {
 [code-task title="Print Sum of N Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function printSum (n) {
+function printSum (input) {
     // Write your code here
 }
 ```
@@ -60,13 +53,14 @@ Write a function, which:
 [code-task title="Print Sum of N Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function printSum (n) {
+function printSum (input) {
+   let n = Number(input.shift());
    let sum = 0;
    for (let i = 1; i <= n; i += 1) {
       sum += i;
    }
+   
    console.log(sum);
-
 }
 ```
 [/code-editor]
@@ -91,7 +85,7 @@ Write a function, which:
 [code-task title="Calculate Month Salary" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function calculateMonthSalary (days, salaryPerDay) {
+function calculateMonthSalary (input) {
    // Write your code here
 }
 
@@ -100,7 +94,7 @@ function calculateMonthSalary (days, salaryPerDay) {
 [task-description]
 Write a function, which:
 
-* Receives days in the current month and salary per day
+* Receives working days in the current month and salary per day
 * Calculates the salary for the month
 * Prints the result on the console
 [/task-description]
@@ -109,10 +103,9 @@ Write a function, which:
 # Sample Input and Output
 |Input|Output|
 |-----|------|
-|30|300|
-|10||
-|28|560|
-|20||
+|2|300|
+|100||
+|200||
 [/slide]
 
 [slide]
@@ -120,13 +113,16 @@ Write a function, which:
 [code-task title="Calculate Month Salary" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function calculateMonthSalary (days, salaryPerDay) {
+function calculateMonthSalary (input) {
+   let days = Number(input.shift());
    let totalSalary = 0;
-   for (int i = 1; i <= days; i += 1) {
+
+   for (let i = 1; i <= days; i += 1) {
+      let salaryPerDay = Number(input.shift());
       totalSalary += salaryPerDay;
    }
-   console.log(totalSalary);
 
+   console.log(totalSalary);
 }
 
 ```
@@ -134,7 +130,7 @@ function calculateMonthSalary (days, salaryPerDay) {
 [task-description]
 Write a function, which:
 
-* Receives days in the current month and salary per day
+* Receives working days in the current month and salary per day
 * Calculates the salary for the month
 * Prints the result on the console
 [/task-description]
@@ -143,8 +139,6 @@ Write a function, which:
 # Sample Input and Output
 |Input|Output|
 |-----|------|
-|30|300|
-|10||
-|28|560|
-|20||
+|2|300|
+|100||
 [/slide]
