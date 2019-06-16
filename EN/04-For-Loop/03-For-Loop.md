@@ -109,7 +109,7 @@ Write a function, which:
 [/slide]
 
 [slide]
-# Problem: Calculate Month Salary
+# Solution: Calculate Month Salary
 [code-task title="Calculate Month Salary" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
