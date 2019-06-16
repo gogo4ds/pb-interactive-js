@@ -1,9 +1,16 @@
 [slide]
+# Homework
+Now, it's your turn to practice what you have learned in the training session.
+
+We have prepared some simple problems for you to solve. If you struggle you can see the solution after each problem. 
+[/slide]
+
+[slide]
 # Problem: Even Numbers n-m
 [code-task title="Even Numbers n-m" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function evenNumbers (n, m) {
+function evenNumbers (input) {
    // Write your code here
 } 
 ```
@@ -30,7 +37,10 @@ Write a function, which:
 [code-task title="Even Numbers n-m" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function evenNumbers (n, m) {
+function evenNumbers (input) {
+   let n = Number(input.shift());
+   let m = Number(input.shift());
+
    for (let i = n; i <= m; i++) {
       if (i % 2 === 0) {
          console.log(i);
@@ -61,7 +71,7 @@ Write a function, which:
 [code-task title="Power of Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function powerOfNumber (p, n) {
+function powerOfNumber (input) {
    // Write your code here
 }
  
@@ -91,7 +101,10 @@ Don't use Math.pow()
 [code-task title="Power of Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function powerOfNumber (p, n) {
+function powerOfNumber (input) {
+   let p = Number(input.shift());
+   let n = Number(input.shift());
+
    let result = 1;
    for(let i = 0; i < p; i++) {
       result = result * n;
@@ -124,7 +137,7 @@ Don't use Math.pow()
 [code-task title="Multiply" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function multiply (n) {
+function multiply (input) {
    // Write your code here
 }
 ```
@@ -158,7 +171,9 @@ Write a program, which:
 [code-task title="Multiply" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function multiply (n) {
+function multiply (input) {
+   let n = Number(input.shift());
+
    for(let i = 1; i <= 10; i++) {
       let result = n * i;
       console.log(`${n} x ${i} = ${result}`);
@@ -195,7 +210,7 @@ Write a program, which:
 [code-task title="Water Flowers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function waterFlowers (weeks, step) {
+function waterFlowers (input) {
    // Write your code here
 }
 ```
@@ -221,7 +236,10 @@ Write a function, which:
 [code-task title="Water Flowers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function waterFlowers (weeks, step) {
+function waterFlowers (input) {
+   let weeks = Number(input.shift());
+   let step = Number(input.shift());
+
    let total = 0;
    for (let i = 1; i <= weeks; i++) {
       if (i % step === 0) {
