@@ -414,9 +414,9 @@ function divideWithoutRemainder(input) {
   let resultP2 = (p2 / n) * 100;
   let resultP3 = (p3 / n) * 100;
   
-  console.log(`{resultP1.toFixed(2):F2}%`);
-  console.log(`{resultP2.toFixed(2):F2}%`);
-  console.log(`{resultP3.toFixed(2):F2}%`);
+  console.log(`${resultP1.toFixed(2):F2}%`);
+  console.log(`${resultP2.toFixed(2):F2}%`);
+  console.log(`${resultP3.toFixed(2):F2}%`);
 }
 ```
 [/code-editor]
