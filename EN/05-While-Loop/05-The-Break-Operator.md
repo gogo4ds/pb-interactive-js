@@ -1,3 +1,3 @@
 [slide]
-# The "break" Operator
+# The break Operator
 [/slide]
