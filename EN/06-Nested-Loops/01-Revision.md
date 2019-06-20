@@ -1,3 +1,0 @@
-[slide]
-# Revision
-[/slide]

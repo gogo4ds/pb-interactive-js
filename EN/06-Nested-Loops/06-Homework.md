@@ -1,3 +1,0 @@
-[slide]
-# Homework
-[/slide]
