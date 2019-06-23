@@ -105,7 +105,7 @@ Write a function to process a sequence of commands:
 [code-editor language=javascript]
 ```
 function numberProcessor(input) {
-  let number = Number(input.shift());
+  let num = Number(input.shift());
   let command = input.shift();
   
   while (command !== "End") {
