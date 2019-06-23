@@ -118,7 +118,7 @@ function numberProcessor(input) {
         break;
     }
 
-    command = commands.shift();
+    command = input.shift();
   }
   console.log(num);
 }
