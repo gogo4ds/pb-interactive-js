@@ -100,7 +100,7 @@ Write a function, which:
 [code-editor language=javascript]
 ```
 function favoriteBook(input) {
-  let favoriteBook = books.shift();
+  let favoriteBook = input.shift();
   let book = input.shift();
 
   while (book !== favoriteBook) {
@@ -180,7 +180,7 @@ function minAndMax(input) {
       max = num;
     }
     
-    nextLine = lines.shift();
+    nextLine = input.shift();
   }
 
   console.log(`Min number: ${min}`);
@@ -247,7 +247,7 @@ function specialNumber(input) {
 
   while (numDigits > 0) {
     let digit = numDigits % 10;
-    numDigits /= 10;
+    numDigits = Math.floor(numDigits / 10);
     
     if (digit != 0 && num % digit != 0) {
       isSpecial = false;
@@ -256,9 +256,9 @@ function specialNumber(input) {
   }
   
   if (isSpecial) {
-    console.log(`${num} is special)`;
+    console.log(`${num} is special`);
   } else {
-    console.log(`${num} is not special)`;
+    console.log(`${num} is not special`);
   }
 }
 ```
@@ -397,6 +397,8 @@ function accountBalance(lines) {
     } else {
       console.log(`Decrease: ${amount.toFixed(2)}`);
     }
+
+    input = lines.shift();
   }
 
   console.log(`Balance: ${balance.toFixed(2)}`);
@@ -419,5 +421,5 @@ Write a function to calculate an account balance
 |500|Increase: 500.00|
 |15.5|Increase: 15.50|
 |80.35|Decrease: 80.35|
-|END|Balance: 435.15|
+|End|Balance: 435.15|
 [/slide]
