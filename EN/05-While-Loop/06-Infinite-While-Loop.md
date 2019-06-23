@@ -9,10 +9,8 @@ while(true) {
     // Commands
 }
 ```
-[/slide]
 
-[slide]
-# Examples
+# Example - Reading Commands (Bug)
 ```js
 function infiniteWhileLoop(commands) {
   let command = "Add";
@@ -22,6 +20,8 @@ function infiniteWhileLoop(commands) {
   }
 }
 ```
+
+# Example - Reading Commands (Bug Fixed)
 ```js
 function infiniteWhileLoop(commands) {
   let command = "Add";
