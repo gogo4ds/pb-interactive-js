@@ -56,7 +56,7 @@ function decreasingNumbers (input) {
   
   while (inputNumber >= 1) {
     console.log(inputNumber);
-    number--;
+    inputNumber--;
   }
 }
 ```
