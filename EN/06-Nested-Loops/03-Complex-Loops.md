@@ -4,12 +4,15 @@ Loops with different steps
 ```js
 for (let i = n; i >= 1; i--) …
 ```
+
 ```js
 for (let j = 1; j <= n; j+=2) …
 ```
+
 ```js
 for (let k = 1; k <= n; k*=2) …
 ```
+
 ```js
 for (let d = n; d > 0; d/=2) …
 ```
@@ -20,7 +23,7 @@ for (let d = n; d > 0; d/=2) …
 [code-task title="Numbers form N to 1" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function numbersFromNto1(n) {
+function numbersFromNto1(input) {
   // Write your code here
 }
 ```
@@ -53,11 +56,15 @@ Write a function to print the numbers from N down to 1
 [code-task title="Numbers form N to 1" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function numbersWithStep(n) {
+function numbersWithStep(input) {
+  let n = Number(input.shift());
   let result = '';
+
   for (let i = 1; i <= n; i += 3) {
-    if (i > 1)
+    if (i > 1) {
       result += ", ";
+    }
+    
     result += i;
   }
   console.log(result);
@@ -92,7 +99,7 @@ Write a function to print the numbers from N down to 1
 [code-task title="Even Powers of 2" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function evenPowersOf2(n) {
+function evenPowersOf2(input) {
   // Write your code here
 }
 ```
@@ -119,15 +126,20 @@ Write a function to print the even powers of 2:
 [code-task title="Even Powers of 2" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function evenPowersOf2(n) {
+function evenPowersOf2(input) {
+  let n = Number(input.shift());
   let num = 1;
   let result = '';
+
   for (let i = 0; i <= n; i += 2) {
-    if (i > 0)
+    if (i > 0) {
       result += ", ";
+    }
+
     result += num;
     num = num * 2 * 2;
   }
+  
   console.log(result);
 }
 ```

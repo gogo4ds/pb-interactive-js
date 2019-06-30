@@ -2,9 +2,9 @@
 # Nested While Loops
 ```js
 // Outer Loop
-while (condition) {      
+while (condition) {
    // Inner Loop 
-   while (condition) {   
+   while (condition) {
        // Statements
    }
 }
@@ -17,16 +17,17 @@ while (condition) {
 let row = 1;
 while (row <= 2) {
   console.log(`Row: ${row}`);
+  
   let col = 1;
   while (col <= 3) {
     console.log(`  Column: ${col}`);
     col++;
   }
+  
   row++;
 }
 ```
 ```
-// Output
 Row: 1
   Column: 1
   Column: 2
@@ -43,7 +44,7 @@ Row: 2
 [code-task title="Triangle of Stars with While" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function triangleOfStars(height) {
+function triangleOfStars(input) {
   // Write your code here
 }
 ```
@@ -77,14 +78,20 @@ Write a function to print a **triangle of stars** as shown below. It:
 [code-task title="Triangle of Stars with While" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function triangleOfStars(height) {
+function triangleOfStars(input) {
+  let height = Number(input.shift());
   let row = 1;
-  while (row < height) {
-    let col = 0;
-    while (col++ < row) {
-      // TODO: Print a row of asteriks("*")
-      row++;
+  while (row <= height) {
+    let col = 1;
+
+    let rowLine = '';
+    while (col <= row) {
+      rowLine += '*';
+      col++;
     }
+
+    row++;
+    console.log(rowLine);
   }
 }
 ```

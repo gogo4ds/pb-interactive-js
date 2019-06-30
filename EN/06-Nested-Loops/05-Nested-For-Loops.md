@@ -4,6 +4,7 @@ The syntax for **a nested for loop** in JS is as follows:
 ```js
 // Outer Loop
 for (init; condition; increment) {
+  
   // Inner Loop
   for (init; condition; increment) { 
       // Commands
@@ -19,8 +20,10 @@ let rows = 3;
 let columns = 2;
 for (let r = 1; r <= rows; r++) {
   console.log("row = " + r);
-  for (let c = 1; c <= columns; c++) 
+  
+  for (let c = 1; c <= columns; c++) {
     console.log("  column = " + c);
+  }
 }
 ```
 ```
@@ -41,7 +44,7 @@ row = 3
 [code-task title="Triangle of Stars" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function triangleOfStars(size) {
+function triangleOfStars(input) {
   // Write your code here
 }
 ```
@@ -75,14 +78,18 @@ Write a function to print a **triangle of stars** as shown below. It:
 [code-task title="Triangle of Stars" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function triangleOfStars(size) {
+function triangleOfStars(input) {
+  let size = Number(input.shift());
   let result = '';
+
   for (let row = 1; row <= size; row++) {
     for (let col = 1; col <= row; col++) {
       result += "*";
     }
+
     result += '\n';
   }
+  
   console.log(result);
 }
 ```
