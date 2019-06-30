@@ -121,7 +121,7 @@ Write a program, which **generates all possible passwords**, consisting of the f
 [/slide]
 
 [slide]
-# Problem: Stupid Passwords
+# Solution: Stupid Passwords
 [code-task title="Stupid Passwords" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
@@ -302,7 +302,11 @@ function primeNumbers(input) {
 ```
 [/code-editor]
 [task-description]
-Write a function to print all **prime numbers in a given range**
+Write a function to print all **prime numbers in a given range**.
+
+A prime number is a whole number greater than 1 whose only factors are 1 and itself.
+
+A factor is a whole numbers that can be divided evenly into another number. 
 [/task-description]
 [code-io /]
 [/code-task]
@@ -323,6 +327,8 @@ Write a function to print all **prime numbers in a given range**
 function primeNumbers(input) {
   let start = Number(input.shift());
   let end = Number(input.shift());
+
+  let result = '';
   for (let num = start; num <= end; num++) {
     let prime = true;
     let divider = 2;
@@ -338,14 +344,20 @@ function primeNumbers(input) {
     }
     
     if (prime) {
-      console.log(num);
+      result += num;
     }
   }
+
+  console.log(result);
 }
 ```
 [/code-editor]
 [task-description]
-Write a function to print all **prime numbers in a given range**
+Write a function to print all **prime numbers in a given range**.
+
+A prime number is a whole number greater than 1 whose only factors are 1 and itself.
+
+A factor is a whole numbers that can be divided evenly into another number. 
 [/task-description]
 [code-io /]
 [/code-task]
@@ -396,14 +408,15 @@ Write a function to **generate PIN codes** following certain rules. It:
 [code-editor language=javascript]
 ```
 function pinCodes(input) {
-  let max1 = Number(input.shift);
-  let max2 = Number(input.shift);
-  let max3 = Number(input.shift);
+  let max1 = Number(input.shift());
+  let max2 = Number(input.shift());
+  let max3 = Number(input.shift());
+
   for (let d1 = 2; d1 <= max1; d1 += 2) {
     for (let d2 = 2; d2 <= max2; d2++) {
       for (let d3 = 2; d3 <= max3; d3 += 2) {
         if (d2 == 2 || d2 == 3 || d2 == 5 || d2 == 7) {
-          console.log(`${i}${j}${k}`);
+          console.log(`${d1}${d2}${d3}`);
         }
       }
     }
@@ -466,7 +479,7 @@ Write a function to generate **3-letter combinations** under certain conditions.
 function lettersCombinations(input) {
   let start = input.shift();
   let end = input.shift();
-  let x = input.shift();
+  let x = input.shift().charCodeAt(0);
 
   let counter = 0;
   let startAscii = start.charCodeAt(0);
@@ -527,7 +540,7 @@ Write a function to generate all 4-digit happy numbers \{d1\}\{d2\}\{d3\}\{d4\} 
 [/slide]
 
 [slide]
-# Problem: Happy Numbers
+# Solution: Happy Numbers
 [code-task title="Happy Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
