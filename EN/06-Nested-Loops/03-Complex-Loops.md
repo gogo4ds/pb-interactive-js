@@ -60,14 +60,9 @@ function numbersWithStep(input) {
   let n = Number(input.shift());
   let result = '';
 
-  for (let i = 1; i <= n; i += 3) {
-    if (i > 1) {
-      result += ", ";
-    }
-    
-    result += i;
+  for (let i = n; i >= 1; i--) {
+      console.log(result);
   }
-  console.log(result);
 }
 ```
 [/code-editor]
@@ -92,71 +87,4 @@ Write a function to print the numbers from N down to 1
 ||3|
 ||2|
 ||1|
-[/slide]
-
-[slide]
-# Problem: Even Powers of 2
-[code-task title="Even Powers of 2" executionStrategy="javascript-code" requiresInput]
-[code-editor language=javascript]
-```
-function evenPowersOf2(input) {
-  // Write your code here
-}
-```
-[/code-editor]
-[task-description]
-Write a function to print the even powers of 2:
-
-* Receives a number n
-* Prints the even powers of 2 up to 2n:
-    * 20, 22, 24, 28, …, 2n
-[/task-description]
-[code-io /]
-[/code-task]
-# Sample Input and Output
-|Input|Output|
-|-----|------|
-|3|1|
-||4|
-||16|
-[/slide]
-
-[slide]
-# Solution: Even Powers of 2
-[code-task title="Even Powers of 2" executionStrategy="javascript-code" requiresInput]
-[code-editor language=javascript]
-```
-function evenPowersOf2(input) {
-  let n = Number(input.shift());
-  let num = 1;
-  let result = '';
-
-  for (let i = 0; i <= n; i += 2) {
-    if (i > 0) {
-      result += ", ";
-    }
-
-    result += num;
-    num = num * 2 * 2;
-  }
-  
-  console.log(result);
-}
-```
-[/code-editor]
-[task-description]
-Write a function to print the even powers of 2:
-
-* Receives a number n
-* Prints the even powers of 2 up to 2n:
-    * 20, 22, 24, 28, …, 2n
-[/task-description]
-[code-io /]
-[/code-task]
-# Sample Input and Output
-|Input|Output|
-|-----|------|
-|3|1|
-||4|
-||16|
 [/slide]
