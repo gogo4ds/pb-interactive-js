@@ -251,20 +251,19 @@ Write a function, which calculates the **money collection** for multiple travel 
 [code-task title="Travelling" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function travelling(input) {
-  let destination = '';
+function travelSavings(input) {
+  let destination;
   while ((destination = input.shift()) != "End") {
-    let neededSum = Number(input);
+    let neededSum = Number(input.shift());
     let collectedSum = 0;
-
     while (collectedSum < neededSum) {
       collectedSum += Number(input.shift());
       console.log(`Collected: ${collectedSum}`);
     }
-
     console.log(`Going to ${destination}!`);
   }
 }
+
 ```
 [/code-editor]
 [task-description]
@@ -344,7 +343,7 @@ function primeNumbers(input) {
     }
     
     if (prime) {
-      result += num;
+      result += num + ' ';
     }
   }
 
