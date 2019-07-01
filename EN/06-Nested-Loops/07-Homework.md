@@ -10,7 +10,7 @@ We have prepared some simple problems for you to solve. If you struggle you can 
 [code-task title="Building" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function building(floors, rooms) {
+function building(input) {
   // Write your code here
 }
 ```
@@ -40,13 +40,30 @@ Write a function to **print a table**, representing a **building**:
 [code-task title="Building" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function building(floors, rooms) {
-  for (let f = floors; f >= 1; f--) {
-    for (let r = 0; r < rooms; r++)
-      if (f === floors) // Print last floor: L{f}{r}
-      else if (f % 2 === 0) // Print office: O{f}{r}
-      else // Print apartment: A{f}{r}
-  }
+function building(input) {
+    let floorsCount = Number(input.shift());
+    let roomsCount = Number(input.shift());
+
+    let result = '';
+
+    for (let floor = floorsCount; floor >= 1; floor--) {
+        let floorRooms = '';
+        for (let room = 0; room < roomsCount; room++) {
+            if (floor == floorsCount) {
+                floorRooms += `L${floor}${room} `;
+            } else {
+                if (floor % 2 == 0) {
+                    floorRooms += `O${floor}${room} `;
+                } else {
+                    floorRooms += `A${floor}${room} `;
+                }
+            }    
+        }
+
+        result += `${floorRooms.trim()}\n`;
+    }
+
+    console.log(result);
 }
 ```
 [/code-editor]
@@ -82,7 +99,7 @@ A10 A11 A12 A13 A14 A15
 [code-task title="Stupid Passwords" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function stupidPasswords(n) {
+function stupidPasswords(input) {
   // Write your code here
 }
 ```
@@ -104,11 +121,12 @@ Write a program, which **generates all possible passwords**, consisting of the f
 [/slide]
 
 [slide]
-# Problem: Stupid Passwords
+# Solution: Stupid Passwords
 [code-task title="Stupid Passwords" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function stupidPasswords(n) {
+function stupidPasswords(input) {
+  let n = Number(input.shift());
   let result = '';
   for (let even = 2; even <= n; even += 2) {
     for (let odd = 1; odd <= n; odd += 2) {
@@ -140,7 +158,7 @@ Write a program, which **generates all possible passwords**, consisting of the f
 [code-task title="Magic Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function magicNumbers(n) {
+function magicNumbers(input) {
   // Write your code here
 }
 ```
@@ -165,12 +183,17 @@ Write a function to find all **3-digit magic numbers** of order **n**
 [code-task title="Magic Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function magicNumbers(n) {
-  for (let d1 = 1; d1 <= 9; d1++)
-    for (let d2 = 0; d2 <= 9; d2++)
-      for (let d3 = 0; d3 <= 9; d3++)
-        if (d1 * d2 * d3 === n)
-          // TODO: Print {d1}{d2}{d3}
+function magicNumbers(input) {
+  let n = Number(input.shift());
+  for (let d1 = 1; d1 <= 9; d1++) {
+    for (let d2 = 0; d2 <= 9; d2++) {
+      for (let d3 = 0; d3 <= 9; d3++) {
+        if (d1 * d2 * d3 === n) {
+          console.log(`${d1}${d2}${d3}`);
+        }
+      }
+    }
+  } 
 }
 ```
 [/code-editor]
@@ -194,7 +217,7 @@ Write a function to find all **3-digit magic numbers** of order **n**
 [code-task title="Travelling" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function travelling(inputLines) {
+function travelling(input) {
   // Write your code here
 }
 ```
@@ -228,18 +251,19 @@ Write a function, which calculates the **money collection** for multiple travel 
 [code-task title="Travelling" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function travelling(inputLines) {
+function travelSavings(input) {
   let destination;
-  while ((destination = inputLines.shift()) != "End") {
-    let neededSum = Number(inputLines);
+  while ((destination = input.shift()) != "End") {
+    let neededSum = Number(input.shift());
     let collectedSum = 0;
     while (collectedSum < neededSum) {
-      collectedSum += Number(inputLines.shift());
+      collectedSum += Number(input.shift());
       console.log(`Collected: ${collectedSum}`);
     }
     console.log(`Going to ${destination}!`);
   }
 }
+
 ```
 [/code-editor]
 [task-description]
@@ -271,13 +295,17 @@ Write a function, which calculates the **money collection** for multiple travel 
 [code-task title="Prime Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function primeNumbers(start, end) {
+function primeNumbers(input) {
   // Write your code here
 }
 ```
 [/code-editor]
 [task-description]
-Write a function to print all **prime numbers in a given range**
+Write a function to print all **prime numbers in a given range**.
+
+A prime number is a whole number greater than 1 whose only factors are 1 and itself.
+
+A factor is a whole numbers that can be divided evenly into another number. 
 [/task-description]
 [code-io /]
 [/code-task]
@@ -295,25 +323,40 @@ Write a function to print all **prime numbers in a given range**
 [code-task title="Prime Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function primeNumbers(start, end) {
+function primeNumbers(input) {
+  let start = Number(input.shift());
+  let end = Number(input.shift());
+
+  let result = '';
   for (let num = start; num <= end; num++) {
     let prime = true;
     let divider = 2;
     let maxDivider = Math.floor(Math.sqrt(num));
+    
     while (divider <= maxDivider) {
       if (num % divider == 0) {
         prime = false;
         break;
       }
+    
       divider++;
     }
-    if (prime) console.log(num);
+    
+    if (prime) {
+      result += num + ' ';
+    }
   }
+
+  console.log(result);
 }
 ```
 [/code-editor]
 [task-description]
-Write a function to print all **prime numbers in a given range**
+Write a function to print all **prime numbers in a given range**.
+
+A prime number is a whole number greater than 1 whose only factors are 1 and itself.
+
+A factor is a whole numbers that can be divided evenly into another number. 
 [/task-description]
 [code-io /]
 [/code-task]
@@ -331,7 +374,7 @@ Write a function to print all **prime numbers in a given range**
 [code-task title="Unique PIN Codes" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function pinCodes(max1, max2, max3) {
+function pinCodes(input) {
   // Write your code here
 }
 ```
@@ -363,13 +406,20 @@ Write a function to **generate PIN codes** following certain rules. It:
 [code-task title="Unique PIN Codes" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function pinCodes(max1, max2, max3) {
-  for (let d1 = 2; d1 <= max1; d1 += 2)
-    for (let d2 = 2; d2 <= max2; d2++)
+function pinCodes(input) {
+  let max1 = Number(input.shift());
+  let max2 = Number(input.shift());
+  let max3 = Number(input.shift());
+
+  for (let d1 = 2; d1 <= max1; d1 += 2) {
+    for (let d2 = 2; d2 <= max2; d2++) {
       for (let d3 = 2; d3 <= max3; d3 += 2) {
-        // TODO: Check if d2 is 2, 3, 5 or 7 and
-        // print the 3 digits one after another
+        if (d2 == 2 || d2 == 3 || d2 == 5 || d2 == 7) {
+          console.log(`${d1}${d2}${d3}`);
+        }
       }
+    }
+  }
 }
 ```
 [/code-editor]
@@ -400,7 +450,7 @@ Write a function to **generate PIN codes** following certain rules. It:
 [code-task title="Letters Combinations" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function lettersCombinations(start, end, x) {
+function lettersCombinations(input) {
   // Write your code here
 }
 ```
@@ -425,18 +475,28 @@ Write a function to generate **3-letter combinations** under certain conditions.
 [code-task title="Letters Combinations" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function lettersCombinations(start, end, x) {
+function lettersCombinations(input) {
+  let start = input.shift();
+  let end = input.shift();
+  let x = input.shift().charCodeAt(0);
+
   let counter = 0;
   let startAscii = start.charCodeAt(0);
   let endAscii = end.charCodeAt(0);
-  for (let l1 = startAscii; l1 <= endAscii; l1++)
-    for (let l2 = startAscii; l2 <= endAscii; l2++)
-      for (let l3 = startAscii; l3 <= endAscii; l3++)
+
+  let combinations = '';
+  for (let l1 = startAscii; l1 <= endAscii; l1++) {
+    for (let l2 = startAscii; l2 <= endAscii; l2++) {
+      for (let l3 = startAscii; l3 <= endAscii; l3++) {
         if (l1 !== x && l2 !== x && l3 !== x) {
-          // TODO: Convert to char and print the combination
-          // TODO: counter++;
+          combinations += `${String.fromCharCode(l1)}${String.fromCharCode(l2)}${String.fromCharCode(l3)} `;
+          counter++;
         }
-  // TODO: Print the counter
+      }
+    }
+  }
+
+  console.log(combinations + counter);
 }
 ```
 [/code-editor]
@@ -460,7 +520,7 @@ Write a function to generate **3-letter combinations** under certain conditions.
 [code-task title="Happy Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function happyNumbers(n) {
+function happyNumbers(input) {
   // Write your code here
 }
 ```
@@ -479,19 +539,28 @@ Write a function to generate all 4-digit happy numbers \{d1\}\{d2\}\{d3\}\{d4\} 
 [/slide]
 
 [slide]
-# Problem: Happy Numbers
+# Solution: Happy Numbers
 [code-task title="Happy Numbers" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
-function happyNumbers(n) {
+function happyNumbers(input) {
+  let n = Number(input.shift());
   let result = '';
-  for (let d1 = 1; d1 <= 9; d1++)
-    for (let d2 = 0; d2 <= 9; d2++)
-      if (d1 + d2 === n)
-        for (let d3 = 0; d3 <= 9; d3++)
-          for (let d4 = 0; d4 <= 9; d4++)
-            if (d3 + d4 === n)
+
+  for (let d1 = 1; d1 <= 9; d1++) {
+    for (let d2 = 0; d2 <= 9; d2++) {
+      if (d1 + d2 === n) {
+        for (let d3 = 0; d3 <= 9; d3++) {
+          for (let d4 = 0; d4 <= 9; d4++) {
+            if (d3 + d4 === n) {
               result += `${d1}${d2}${d3}${d4} `;
+            }
+          }
+        }
+      }
+    }
+  }
+
   console.log(result);
 }
 ```

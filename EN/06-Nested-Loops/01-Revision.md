@@ -1,4 +1,6 @@
 [slide]
+# Revision
+
 # While Loop
 Control flow **statement**
 
@@ -16,18 +18,14 @@ while (i <= 5) {
    i++;
 }
 ```
-[/slide]
 
-[slide]
 # While or For?
 ***while*** and ***for*** loops **repeat** blocks of **code**
 
 Use ***for*** when you know in advance the **number of repetitions**
 
 Use ***while*** when you don't know when the **exit condition** will be met
-[/slide]
 
-[slide]
 # The "break" Operator
 Used for **prematurely exiting** the loop
 
