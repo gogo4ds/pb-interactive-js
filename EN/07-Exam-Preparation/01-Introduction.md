@@ -1,3 +1,0 @@
-[slide]
-# Exam Preparation
-[/slide]
