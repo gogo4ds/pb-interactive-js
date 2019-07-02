@@ -21,7 +21,7 @@ Print on the console one line:
 - If the time is not enough: "You don't have enough time to watch \{name of the series\}, you need \{time needed\} more minutes."
 Round the time up to the nearest whole number.
 
-[code-task title="Problem-02" executionType="tests-execution" executionStrategy="javascript-code" requiresInput]
+[code-task title="Problem-02" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
 function solve(input) {
@@ -50,87 +50,5 @@ Time left: 96 - 12 - 24 = 60
 The time we have left is bigger or equal to the duration of the episode, so we print the suitable output. 
 [/task-description]
 [code-io /]
-[tests]
-[test]
-[input]
-Riverdale
-57
-90
-[/input]
-[output]
-You don't have enough time to watch Riverdale, you need 1 more minutes.
-[/output]
-[/test]
-[test]
-[input]
-Gotham
-45
-120
-[/input]
-[output]
-You have enough time to watch Gotham and left with 30 minutes free time.
-[/output]
-[/test]
-[test]
-[input]
-Arrow
-45
-60
-[/input]
-[output]
-You don't have enough time to watch Arrow, you need 8 more minutes.
-[/output]
-[/test]
-[test]
-[input]
-CW
-45
-51
-[/input]
-[output]
-You don't have enough time to watch CW, you need 14 more minutes.
-[/output]
-[/test]
-[test]
-[input]
-Lucifer
-50
-75
-[/input]
-[output]
-You don't have enough time to watch Lucifer, you need 4 more minutes.
-[/output]
-[/test]
-[test]
-[input]
-Riverdale
-45
-80
-[/input]
-[output]
-You have enough time to watch Riverdale and left with 5 minutes free time.
-[/output]
-[/test]
-[test]
-[input]
-Game of thrones
-56
-90
-[/input]
-[output]
-You have enough time to watch Game of thrones and left with 1 minutes free time.
-[/output]
-[/test]
-[test]
-[input]
-Lucifer
-45
-80
-[/input]
-[output]
-You have enough time to watch Lucifer and left with 5 minutes free time.
-[/output]
-[/test]
-[/tests]
 [/code-task]
 [/slide]

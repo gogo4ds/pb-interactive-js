@@ -20,7 +20,7 @@ From the console you receive 4 lines:
 You have to print on the console the time needed to watch all of the episodes, rounded down to the nearest whole number in the following format: 
 - "Total time needed to watch the \{name of the series\} series is \{time\} minutes."
 
-[code-task title="Problem-01" executionType="tests-execution" executionStrategy="javascript-code" requiresInput]
+[code-task title="Problem-01" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
 function solve(input) {
@@ -51,73 +51,5 @@ Additional time from the special episode: 3*10 = 30
 Total time to watch the episodes: 66 * 18 * 3 + 30 = 3594.0  
 [/task-description]
 [code-io /]
-[tests]
-[test]
-[input]
-Flash
-5
-20
-51
-[/input]
-[output]
-Total time needed to watch the Flash series is 6170 minutes.
-[/output]
-[/test]
-[test]
-[input]
-Origin
-10
-19
-50
-[/input]
-[output]
-Total time needed to watch the Origin series is 11500 minutes.
-[/output]
-[/test]
-[test]
-[input]
-Arrow
-5
-24
-60
-[/input]
-[output]
-Total time needed to watch the Arrow series is 8690 minutes.
-[/output]
-[/test]
-[test]
-[input]
-Vampires
-8
-25
-50
-[/input]
-[output]
-Total time needed to watch the Vampires series is 12080 minutes.
-[/output]
-[/test]
-[test]
-[input]
-Tom & Jerry
-15
-25
-30
-[/input]
-[output]
-Total time needed to watch the Tom & Jerry series is 13650 minutes.
-[/output]
-[/test]
-[test]
-[input]
-Teen wolf
-5
-20
-55
-[/input]
-[output]
-Total time needed to watch the Teen wolf series is 6650 minutes.
-[/output]
-[/test]
-[/tests]
 [/code-task]
 [/slide]

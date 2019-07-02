@@ -23,7 +23,7 @@ You receive 3 lines from the console:
 Print one line on the console: "Your bill is \{total price\}$"
  * The price must be formatted to two digits after the decimal point.
 
-[code-task title="Problem-03" executionType="tests-execution" executionStrategy="javascript-code" requiresInput]
+[code-task title="Problem-03" executionStrategy="javascript-code" requiresInput]
 [code-editor language=javascript]
 ```
 function solve(input) {
@@ -56,97 +56,5 @@ For this movie there is 30% discount for 4 or more people.
 100 – 30 -> 70$ is the total price
 [/task-description]
 [code-io /]
-[tests]
-[test]
-[input]
-John Wick
-Drink
-23
-[/input]
-[output]
-Your bill is 276.00$
-[/output]
-[/test]
-[test]
-[input]
-John Wick
-Popcorn
-11
-[/input]
-[output]
-Your bill is 165.00$
-[/output]
-[/test]
-[test]
-[input]
-John Wick
-Menu
-8
-[/input]
-[output]
-Your bill is 152.00$
-[/output]
-[/test]
-[test]
-[input]
-Star Wars
-Drink
-10
-[/input]
-[output]
-Your bill is 126.00$
-[/output]
-[/test]
-[test]
-[input]
-Star Wars
-Popcorn
-3
-[/input]
-[output]
-Your bill is 75.00$
-[/output]
-[/test]
-[test]
-[input]
-Star Wars
-Menu
-1
-[/input]
-[output]
-Your bill is 30.00$
-[/output]
-[/test]
-[test]
-[input]
-Jumanji
-Drink
-2
-[/input]
-[output]
-Your bill is 15.30$
-[/output]
-[/test]
-[test]
-[input]
-Jumanji
-Popcorn
-1
-[/input]
-[output]
-Your bill is 11.00$
-[/output]
-[/test]
-[test]
-[input]
-Jumanji
-Menu
-3
-[/input]
-[output]
-Your bill is 42.00$
-[/output]
-[/test]
-[/tests]
 [/code-task]
 [/slide]
