@@ -1,6 +1,6 @@
 [slide]
 # Training Session
 
-[youtube-video videoId="y5cwtYzhH6I" /]
+[vimeo-video videoId="341573435" /]
 
 [/slide]
