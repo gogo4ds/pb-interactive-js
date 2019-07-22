@@ -1,7 +1,7 @@
 [slide]
 # Live Session
 
-[live-stream videoId="341506782" playerType="vimeo" /]
+[live-stream videoId="342596676" playerType="vimeo" /]
 
 [slido id="5faavvrx" /]
 
