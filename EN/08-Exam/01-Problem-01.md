@@ -1,2 +1,0 @@
-[exam-information]
-[/exam-information]
